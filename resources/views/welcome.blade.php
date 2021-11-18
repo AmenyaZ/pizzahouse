@@ -17,15 +17,10 @@
          </div>
     @endif
      <div class="content">
+         <img src="/img/pizza-house.png">
          <div class="title m-b-md">
-             Pizza House <br>
              The North's Best Pizzas
          </div>
-        <div class="links">
-            <a href="https://laravel.com/docs">Docs</a>
-            <a href="https://laracasts.com">Laracasts</a>
-            <a href="https://laravel-news.com/"> News </a>
-        </div>
     </div>
 </div> 
 @endsection
