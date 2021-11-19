@@ -2,16 +2,13 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
+use App\Models\pizza;
 
 class PizzaController extends Controller
 {
     public function index(){
-        $pizzas = [
-            ['type' => 'hawaian', 'base' => 'Cheesy Crust'],
-            ['type' => 'Volcano', 'base' => 'gerlic Crust'],
-            ['type' => 'Veg Supreme', 'base' => 'Thin & Cripsy']
-    
-        ];
+
+        $pizzas = pizza::orderBy('name')->get();
            
         return view('pizzas',[
             'pizzas' => $pizzas,
