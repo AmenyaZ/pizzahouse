@@ -22,8 +22,10 @@ html, body{
     right: 10px;
     top: 18px;
 }
-.content{
+.contents{
+
     text-align: center;
+    align-content: center;
 
 }
 

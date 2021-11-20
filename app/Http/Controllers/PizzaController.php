@@ -8,16 +8,18 @@ class PizzaController extends Controller
 {
     public function index(){
 
-        $pizzas = pizza::orderBy('name')->get();
+        $pizzas = pizza::latest('name')->get();
            
-        return view('pizzas',[
+        return view('pizzas.index',[
             'pizzas' => $pizzas,
-            'name' => request('name'),
-            'age' => request('age'),
     
         ]);
     }
     public function show($id){
-        return view('details', ['id' => $id]);
+        $pizza = pizza::find($id);
+        return view('pizzas.show', ['pizza' => $pizza]);
+    }
+    public function create(){
+        return view('pizzas.create');
     }
 }
